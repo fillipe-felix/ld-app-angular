@@ -1,1 +1,17 @@
-<p>header works!</p>
+{{nome}}
+
+<button (click)="alteraNome()">Alterar nome!</button>
+
+
+<br><br>
+
+{{cidade}}
+<br>
+<input [disabled]="desabilitaCidadeInput" [(ngModel)]="cidade" placeholder="Digite sua cidade">
+<br>
+
+<button (click)="resetCidade()">Resetar cidade!</button>
+
+<br>
+
+<button (click)="desabilitaCidade()">Desabilita cidade!</button>

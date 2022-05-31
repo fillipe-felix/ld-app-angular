@@ -9,8 +9,24 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  nome: string = 'Fillipe'
+  cidade: string = '';
+  desabilitaCidadeInput: boolean = false;
+
   ngOnInit(): void {
     //executa aqui quando a tela estiver carregando
+
   }
 
+  alteraNome(){
+    this.nome = 'Fillipe Félix'
+  }
+
+  resetCidade() {
+    this.cidade = ''
+  }
+
+  desabilitaCidade() {
+    this.desabilitaCidadeInput = true
+  }
 }
