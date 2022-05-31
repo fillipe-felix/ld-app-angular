@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //executa aqui quando a tela estiver carregando
   }
 
 }
