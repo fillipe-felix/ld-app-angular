@@ -15,6 +15,8 @@ import {FormsModule} from "@angular/forms";
     HeaderRoutingModule,
     FormsModule
   ],
-  exports: []
+  exports: [
+    HeaderComponent
+  ]
 })
 export class HeaderModule { }

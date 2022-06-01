@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() nomeEnviado!: string;
+  @Output() alterarNomeDoPai: EventEmitter<string> = new EventEmitter;
 
   constructor() { }
 
@@ -15,11 +18,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     //executa aqui quando a tela estiver carregando
-
+    this.nome = this.nomeEnviado;
   }
 
   alteraNome(){
     this.nome = 'Fillipe Félix'
+    this.alterarNomeDoPai.emit(this.nome)
   }
 
   resetCidade() {
