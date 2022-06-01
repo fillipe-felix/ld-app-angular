@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+//card > button title > highlight
+
+//com css
+.card {
+  // css do card
+}
+
+.card > .title {
+  // css do title
+}
+
+.card > .title > .highlight {
+  // css do highlight
+}
+
+.card > .button {
+  // css do button
+}
+
+// com scss
+.card {
+  > .title {
+    > .highlight {
+
+    }
+  }
+
+  > .button {
+
+  }
+}
+
+// -----------------------------------------
+
+// arquivo responsive.scss
+
+$tablet-size: 600px;
+
+@mixin for-tablet {
+  @media (min-width: $tablet-size) {
+    @content;
+  }
+}
+
+
+// arquivo card.scss
+
+//@import 'responsive.scss'
+
+@include for-tablet{
+  .card{
+    width: 300px;
+  }
+}
+
+
+// ------------------------------------------------------
+
+
+$sizes : 5, 10, 15, 20, 25;
+$directions: 'top', 'left', 'bottom', 'right';
+
+@each $direction in $directions{
+  @each $size in $sizes {
+    .p-#{$direction}-#{$size}{
+      padding-#{$direction}: #{$size}px;
+    }
+  }
+}
